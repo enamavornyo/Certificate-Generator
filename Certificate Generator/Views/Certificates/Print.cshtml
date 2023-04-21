@@ -12,37 +12,41 @@
 <h1>Details</h1>
 <hr />
 <!-- Outer container, full page width and height, red border -->
-<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 90vh;
+<div class="container-fluid justify-content-center align-items-center" style="height: 90vh;
         background: url('/media/Certificates/@Url.Content(Model.ImageName)');
         background-repeat: no-repeat;
         background-position: center;
         overflow: hidden;
         border: 2px solid red">
 
-    <p>@Model.Course.Name </p> |  <p>@Model.Title.Name </p> |
+    <div class="container-fluid"style="margin-top:27vh;">
+         
+        <div class="container-fluid mb-5 d-flex justify-content-center align-items-center">
+            <h2>@Model.Title.Name </h2>
+        </div>
 
-    <h4>@Model.FName @Model.LName</h4>
-    @*<img src="/media/Certificates/@Url.Content(Model.ImageName)" class="mx-auto object-fit-cover d-block img-fluid p-0" alt="" />*@
-    <!-- Inner row 1, final image container, centered, blue border -->
-    <!--<div class="row text-center d-flex justify-content-center " style="overflow: hidden; background-color: #21468a; width: 30vw; height: 70vh; border: 1px solid #21468a ">-->
-    <!-- Inner row for Emp image, wraps automatically, automatically centered -->
-    <!--<div class="row text-center d-flex mt-4 p-0" style="overflow: hidden; width: 25vw; height: 50vh; border: 1px solid #21468a">-->
-    @*<p>@Model.Title.Name </p>*@
-    <!-- Innermost text, wraps automatically, automatically centered -->
-    <!--</div>--> <!-- Inner row -->
-    <!--<div style="color:white">-->
-    @*<h4>@Model.FName @Model.LName</h4>*@
-    <!--</div>
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <h3>@Model.FName.ToUpper() @Model.LName.ToUpper() </h3>
+        </div>
 
-    <div style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-style: italic; font-weight: normal;
-                text-decoration: none; text-transform: none; font-variant: small-caps;">-->
-    @*<p>@Model.Course.Name @Model.SerialNum </p>*@
+        <div class="container-fluid mt-5 d-flex justify-content-center align-items-center">
+            <h2>@Model.Course.Name </h2>
+        </div>
 
-    <!--</div>
+        <div class="container-fluid mt-1 d-flex justify-content-center align-items-center">
+            <p>@Model.StartDate.ToShortDateString() - @Model.EndDate.ToShortDateString()</p>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <p>@Model.SerialNum </p>
+        </div>
+
+    </div>
 
 
-    </div>-->
-    <!-- Inner row -->
+
+
+
 
 
 </div>
@@ -62,13 +66,7 @@
     divToPrint.addEventListener('click', function () {
         print();
     })
-            //var popupWin = window.open('', '_blank',);
-            ////'width=300,height=400,location=no,left=200px'
-            //popupWin.document.open();
-            //popupWin.document.write('<html><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
-            //popupWin.document.close();
-
-            //print();
+           
         //}</script>
 
 

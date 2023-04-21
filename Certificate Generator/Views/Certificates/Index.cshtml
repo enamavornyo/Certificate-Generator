@@ -47,10 +47,12 @@
                 @Html.DisplayFor(modelItem => item.Course.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
+                @*@Html.DisplayFor(modelItem => item.StartDate)*@
+                @item.StartDate.ToShortDateString()
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EndDate)
+                @*@Html.DisplayFor(modelItem => item.EndDate)*@
+                @item.EndDate.ToShortDateString()
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SerialNum)
