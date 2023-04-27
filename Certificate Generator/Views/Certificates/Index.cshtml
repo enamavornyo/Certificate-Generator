@@ -25,53 +25,55 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                <img src="/media/Certificates/@item.ImageName" width="100" alt="" />
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="/media/Certificates/@item.ImageName" width="100" alt="" />
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.FName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Course.Name)
-            </td>
-            <td>
-                @*@Html.DisplayFor(modelItem => item.StartDate)*@
-                @item.StartDate.ToShortDateString()
-            </td>
-            <td>
-                @*@Html.DisplayFor(modelItem => item.EndDate)*@
-                @item.EndDate.ToShortDateString()
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SerialNum)
-            </td>
-            <td>
-                <a asp-action="Print" asp-route-id="@item.Id">Template</a> |
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.FName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Name)
+                </td>
+                <td>
+
+                    @item.StartDate.ToShortDateString()
+                </td>
+                <td>
+
+                    @item.EndDate.ToShortDateString()
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SerialNum)
+                </td>
+                <td>
+                    <a asp-action="Print" asp-route-id="@item.Id">Template</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 
 <div class="d-flex w-100 justify-content-center">
     <pagination page-count="@ViewBag.TotalPages"
-                page-target="/Certificates/@ViewBag.EmpTypeSlug"
+                page-target="/certificates/@ViewBag.CategorySlug"
                 page-number="@ViewBag.PageNumber"
                 page-range="@ViewBag.PageRange">
     </pagination>
 </div>
+
