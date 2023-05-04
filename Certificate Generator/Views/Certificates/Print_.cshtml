@@ -1,0 +1,73 @@
+@model Certificate_Generator.Models.Certificate
+
+@{
+    ViewData["Title"] = "Print Certificate";
+}
+
+@*<link rel="stylesheet" href="/css/ProfileCss.css" />*@
+<div id="printImage">
+
+    ABC
+</div>
+<h1>Details</h1>
+<hr />
+<!-- Outer container, full page width and height, red border -->
+<div class="container-fluid justify-content-center align-items-center" style="height: 90vh;
+        background: url('/media/Certificates/@Url.Content(Model.ImageName)');
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        border: 2px solid red">
+
+    <div class="container-fluid"style="margin-top:27vh;">
+         
+        <div class="container-fluid mb-5 d-flex justify-content-center align-items-center">
+            <h2>@Model.Title.Name </h2>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <h3>@Model.FName.ToUpper() @Model.LName.ToUpper() </h3>
+        </div>
+
+        <div class="container-fluid mt-5 d-flex justify-content-center align-items-center">
+            <h2>@Model.Course.Name </h2>
+        </div>
+
+        <div class="container-fluid mt-1 d-flex justify-content-center align-items-center">
+            <p>@Model.StartDate.ToShortDateString() - @Model.EndDate.ToShortDateString()</p>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <p>@Model.SerialNum </p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<div class="container-fluid d-flex justify-content-center align-items-center">
+
+
+    <a asp-action="Index" class="btn btn-primary mx-auto">Back</a>  <a href="#" class="btn btn-primary mx-auto">Print</a>
+</div>
+
+
+
+<input id="print" type="button" onclick="PrintDiv()" value="Print" />
+
+<script type="text/javascript">//function PrintDiv() {
+    var divToPrint = document.getElementById('print');
+    divToPrint.addEventListener('click', function () {
+        print();
+    })
+           
+        //}</script>
+
+
+
