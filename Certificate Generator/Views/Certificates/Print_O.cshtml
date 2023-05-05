@@ -2,7 +2,6 @@
 
 @{
     ViewData["Title"] = "Print Certificate";
-    Layout = "~/Views/Shared/_CertificateLayout.cshtml";
 }
 
 <link rel="stylesheet" href="/css/certificate.css" />
@@ -11,7 +10,6 @@
 
 <div class="body " >
     <div id="content2" class="container pm-certificate-container print-m-0">
-        <div class="certificate-border"></div>
         <div class="outer-border"></div>
         <div class="inner-border"></div>
 
@@ -72,18 +70,18 @@
                     </div>
 
                     <!--<div class="col-xs-12">
-                    <div class="row">
-                        <div class="col-xs-2">-->
+                        <div class="row">
+                            <div class="col-xs-2">-->
                     <!-- LEAVE EMPTY -->
                     <!--</div>
-                <div class="pm-course-title underline col-xs-8 text-center">
-                    <span class="pm-credits-text block bold sans">BPS PGS Initial PLO for Principals at Cluster Meetings</span>
-                </div>
-                <div class="col-xs-2">-->
-                    <!-- LEAVE EMPTY -->
-                    <!--</div>
+                    <div class="pm-course-title underline col-xs-8 text-center">
+                        <span class="pm-credits-text block bold sans">BPS PGS Initial PLO for Principals at Cluster Meetings</span>
                     </div>
-                </div>-->
+                    <div class="col-xs-2">-->
+                    <!-- LEAVE EMPTY -->
+                    <!--</div>
+                        </div>
+                    </div>-->
                 </div>
 
                 <div class="col-xs-12">
@@ -114,19 +112,19 @@
                             </div>
 
                             @*<div class="col-4 pm-certified col-4 text-center">
-                                <span class="pm-credits-text block sans">Buffalo City School District</span>
-                                <span class="pm-empty-space block underline"></span>
-                                <span class="bold block">Crystal Benton Instructional Specialist II, Staff Development</span>
-                            </div>
-                            <div class="col-xs-4">
-                             LEAVE EMPTY
-                            </div>
-                            <div class="col-4 pm-certified col-xs-4 text-center">
-                                <span class="pm-credits-text block sans">Date Completed</span>
-                                <span class="pm-empty-space block underline"></span>
-                                <span class="bold block">DOB: </span>
-                                <span class="bold block">Social Security # (last 4 digits)</span>
-                            </div>*@
+                                    <span class="pm-credits-text block sans">Buffalo City School District</span>
+                                    <span class="pm-empty-space block underline"></span>
+                                    <span class="bold block">Crystal Benton Instructional Specialist II, Staff Development</span>
+                                </div>
+                                <div class="col-xs-4">
+                                 LEAVE EMPTY
+                                </div>
+                                <div class="col-4 pm-certified col-xs-4 text-center">
+                                    <span class="pm-credits-text block sans">Date Completed</span>
+                                    <span class="pm-empty-space block underline"></span>
+                                    <span class="bold block">DOB: </span>
+                                    <span class="bold block">Social Security # (last 4 digits)</span>
+                                </div>*@
                         </div>
                     </div>
                 </div>
@@ -139,7 +137,7 @@
     </div>
 </div>
 
-<div class="toolbar no-print mt-4" style= "margin-left: 500px;">
+<div class="toolbar no-print">
     <button class="btn btn-info" onclick="window.print()">
         Print Certificate
     </button>

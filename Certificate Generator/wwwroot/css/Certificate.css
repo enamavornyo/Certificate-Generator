@@ -1,5 +1,15 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pinyon+Script|Rochester');
 
+@media print {
+    .no-print, .no-print * {
+        display: none !important;
+    }
+
+    .print-m-0 {
+        margin: 0 !important;
+    }
+}
+
 .cursive {
     font-family: 'Pinyon Script', cursive;
 }
@@ -55,7 +65,7 @@
 
 body {
     padding: 20px 0;
-    background: #ccc;
+    background: white;
 }
 
 
@@ -63,11 +73,13 @@ body {
     position: relative;
     width: 1122.24px;
     height: 793.92px;
-    background-color: #fff;
+/*    background-color: #fff;*/
     padding: 30px;
     color: #333;
     font-family: 'Open Sans', sans-serif;
-    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+   
+/*    box-shadow: 0 0 5px rgba(0, 0, 0, .5);*/
+/*    margin: 65px 0 10px 0;*/
     /*background: -webkit-repeating-linear-gradient(
     45deg,
     #618597,
@@ -95,6 +107,19 @@ body {
     top: 40%;
     margin-top: -297px;
     border: 10px solid #4dd9ff;
+}
+
+.certificate-border {
+    width: 1122.24px;
+    height: 793.92px;
+    position: absolute;
+    left: 37%;
+    margin-left: -415px;
+    top: 40%;
+    margin-top: -313px;
+/*    border: 10px solid #4dd9ff;*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    padding: 30px;
 }
 
 .inner-border {
